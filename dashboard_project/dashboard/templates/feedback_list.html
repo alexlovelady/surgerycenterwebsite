@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Feedback List{% endblock %}
+
+{% block content %}
+    <h1>Feedback List</h1>
+    <ul>
+        {% for feedback in feedback_list %}
+            <li>
+                {{ feedback.name }} - {{ feedback.email }} - {{feedback.date}} - {{ feedback.message }}
+                <form method="post" action="{% url 'delete_feedback' feedback.id %}">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

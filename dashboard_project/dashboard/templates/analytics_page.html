@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Analytics{% endblock %}
+
+{% block content %}
+    <h1>Analytics</h1>
+    <div class="analytics">
+        <ul>
+            {% for entry in analytics %}
+                <li>{{ entry.timestamp }} - Page: {{ entry.page }} - Views: {{ entry.views }} - Unique Views: {{ entry.unique_views }}</li>
+            {% empty %}
+                <li>No analytics available.</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

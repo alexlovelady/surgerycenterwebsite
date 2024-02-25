@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block content %}
+    {% load static %}  <!-- Add this line to load the static template tags -->
+    <h1>Live Order Blocks</h1>
+    <p>Currently we only support futures data. If there is a symbol you would like to see, please let us know in the <a href="{% url 'feedback' %}">feedback</a> tab.</p>
+    <form id="filterForm">
+        <label for="symbol">Symbol:</label>
+        <select id="symbol" name="symbol">
+            {% for row in symbols %}
+                <option value="{{ row }}">{{ row }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="timeframe">Timeframe:</label>
+        <select id="timeframe" name="timeframe">
+            {% for row in timeframes %}
+                <option value="{{ row }}">{{ row }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Apply Filters</button>
+        <button type="button" id="reload-btn">Reload Data</button>
+        {% if new_data_available %}
+            <span>New data is available</span>
+        {% else %}
+            <span>No new data</span>
+        {% endif %}
+    </form>
+
+    <table id="data">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Time Frame</th>
+                <th>Open</th>
+                <th>Midpoint</th>
+                <th>Close</th>
+                <th>Bias</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in filtered_data %}
+            <tr>
+                <td>{{ row.0 }}</td>
+                <td>{{ row.1 }}</td>
+                <td>{{ row.2 }}</td>
+                <td>{{ row.3 }}</td>
+                <td>{{ row.4 }}</td>
+                <td>{{ row.5 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+    document.getElementById('filterForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var symbol = document.getElementById('symbol').value;
+        var timeframe = document.getElementById('timeframe').value;
+        var urlParams = new URLSearchParams(window.location.search);
+        urlParams.set('symbol', symbol);
+        urlParams.set('timeframe', timeframe);
+        window.location.href = window.location.pathname + '?' + urlParams.toString();
+    });
+    </script>
+    <script>
+    document.getElementById('reload-btn').addEventListener('click', function() {
+        document.getElementById('filter-form').submit();
+    });
+    </script>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Page{% endblock %}
+
+{% block content %}
+    <h1>Admin Page</h1>
+    <div class="feedback-list">
+        <h2>Feedback List</h2>
+        <ul>
+            {% for feedback in feedback_list %}
+                <li>
+                    <a href="{% url 'feedback_list' %}">Feedback List</a>
+                </li>
+            {% empty %}
+                <li>No feedback available.</li>
+            {% endfor %}
+        </ul>
+        <h2>User Management</h2>
+        <ul>
+            <li>
+                <a href="{% url 'user_management' %}">User Management</a>
+                <li><a href="{% url 'activity_log_page' %}">Activity Log</a></li>
+                <li><a href="{% url 'analytics' %}">Analytics</a></li>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
