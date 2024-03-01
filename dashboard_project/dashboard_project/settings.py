@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import django_heroku
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -125,6 +126,8 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 STATICFILES_DIRS = [
     BASE_DIR / 'dashboard'/'static',
 ]
@@ -134,5 +137,4 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import django_heroku
 django_heroku.settings(locals())
