@@ -1,0 +1,521 @@
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: #1c3a57;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #f5f7fa;
+}
+
+.hero-section {
+    position: relative;
+    background: url('images/header.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 150px 0;
+    text-align: center;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-family: 'Lora', serif;
+}
+
+.hero-section button {
+    background-color: #007acc;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.hero-section button:hover {
+    background-color: #005b99;
+}
+
+.introduction {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.introduction h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-family: 'Lora', serif;
+}
+
+.introduction button {
+    background-color: #1c3a57;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.introduction button:hover {
+    background-color: #333a57;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    color: #007acc;
+}
+
+.card p {
+    font-family: 'Lora', serif;
+    margin-bottom: 20px;
+}
+
+.testimonials {
+    padding: 60px 0;
+    background-color: #e8f1f8;
+    text-align: center;
+    border-top: 4px solid #007acc;
+    border-bottom: 4px solid #007acc;
+}
+
+.testimonials h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #007acc;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #005b99;
+}
+
+.news {
+    padding: 60px 0;
+    background-color: #f7fafc;
+    text-align: center;
+}
+
+.news h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #007acc;
+    margin-bottom: 40px;
+}
+
+.news-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-left: 6px solid #007acc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.news-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    color: #005b99;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-family: 'Lora', serif;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.news-item a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.news-item a:hover {
+    color: #005b99;
+    text-decoration: underline;
+}
+
+.about {
+    padding: 60px 0;
+}
+
+.about h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-family: 'Lora', serif;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.surgeons {
+    padding: 60px 0;
+    background-color: #f7fafc;
+}
+
+.surgeons h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #007acc;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.surgeon-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.surgeon-profile img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.surgeon-info h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.surgeon-info p {
+    font-family: 'Lora', serif;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.surgery-overview {
+    padding: 60px 0;
+}
+
+.surgery-overview h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+.surgery-overview p {
+    font-family: 'Lora', serif;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+/* Surgery Statistics Section */
+.surgery-stats {
+    padding: 60px 0;
+    background-color: #f7fafc;
+}
+
+.surgery-stats h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+.surgery-stats ul {
+    list-style: none;
+    padding: 0;
+    font-family: 'Lora', serif;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.surgery-stats ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.surgery-stats ul li::before {
+    content: "\2022"; /* Bullet point */
+    color: #007acc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5em;
+}
+
+/* Surgery Expectations Section */
+.surgery-expectations {
+    padding: 60px 0;
+}
+
+.surgery-expectations h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+.surgery-expectations h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: #005b99;
+    margin-bottom: 15px;
+}
+
+.surgery-expectations p {
+    font-family: 'Lora', serif;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    padding: 60px 0;
+}
+
+.contact-info h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-family: 'Lora', serif;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Contact Form Section */
+.contact-form {
+    padding: 60px 0;
+    background-color: #f7fafc;
+}
+
+.contact-form h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-family: 'Lora', serif;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: 'Lora', serif;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.1em;
+}
+
+.contact-form button {
+    background-color: #007acc;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #005b99;
+}
+
+/* Map Section */
+.map {
+    padding: 60px 0;
+}
+
+.map h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+.footer {
+    background-color: #1c3a57;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.footer p {
+    margin: 0;
+    font-family: 'Lora', serif;
+    font-size: 1.1em;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer ul li {
+    margin: 0 15px;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #f5f7fa;
+}
