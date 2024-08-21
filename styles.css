@@ -14,26 +14,6 @@ body {
     text-align: center;
 }
 
-.topnav button {
-    background-color: #007acc;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    font-size: 1.2em;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
-    position:absolute;
-    top: -50%;
-    right: -10%;
-    margin: 10px;
-}
-
-.topnav button:hover {
-    background-color: #005b99;
-}
-
 .navbar {
     background-color: #1c3a57;
     padding: 1em 0;
