@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: 'Lora', serif;
     margin: 0;
@@ -8,16 +9,16 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    padding: 0px;
+    max-width: 1200px;
     text-align: center;
 }
 
 .navbar {
     background-color: #1c3a57;
     padding: 0.1em 0;
-    position: relative; /* Ensure the navbar itself is positioned relative to allow absolute positioning of dropdowns */
+    position: relative;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -29,10 +30,11 @@ body {
     padding: 0;
     margin: 0;
     align-items: center;
+    flex-wrap: wrap; /* Added for better responsiveness */
 }
 
 .navbar ul li {
-    position: relative; /* Each li is positioned relative to allow absolute positioning of the dropdown within it */
+    position: relative;
 }
 
 .navbar ul li a, .dropbtn {
@@ -40,23 +42,23 @@ body {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 1em; /* Set a consistent font size */
+    font-size: 1em;
     transition: color 0.3s ease;
-    padding: 0.5em 0; /* Adjust padding to control spacing */
-    line-height: 1.5; /* Make sure the line height is consistent */
-    background: none; /* Remove any default button styling */
-    border: none; /* Remove any border that might be present on buttons */
-    cursor: pointer; /* Ensure the cursor is the same for links and buttons */
-    display: inline-flex; /* Ensure it behaves like a link */
-    align-items: center; /* Vertically center the text */
+    padding: 0.5em 0;
+    line-height: 1.5;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
 }
 
 .navbar ul li a:hover, .dropbtn:hover, .dropdown-content a:hover, .side-dropdown a:hover {
     color: black;
     background-color: white;
-    border-radius: 8px; /* Rounded corners for better aesthetics */
-    padding: 0.5em 1em; /* Larger padding for a bigger hover effect box */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slight shadow to emphasize the hover */
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Dropdown About Menu */
@@ -71,8 +73,8 @@ body {
     min-width: 160px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1;
-    top: 100%; /* Position dropdown below the navbar */
-    left: 0; /* Align dropdown with the parent element */
+    top: 100%;
+    left: 0;
 }
 
 .dropdown-content a {
@@ -82,7 +84,7 @@ body {
     display: block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 1em; /* Ensure consistent font size */
+    font-size: 1em;
     transition: background-color 0.3s ease;
 }
 
@@ -107,12 +109,12 @@ body {
 .side-dropdown {
     position: absolute;
     top: 0;
-    left: 100%; /* Aligns the side dropdown to the right of the main item */
-    margin-left: 0; /* Prevents any unnecessary gap */
-    background-color: #f5f7fa; /* Keeps the same background as dropdown-content */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+    left: 100%;
+    margin-left: 0;
+    background-color: #f5f7fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1;
-    display: none; /* Initially hidden */
+    display: none;
     white-space: nowrap;
 }
 
@@ -123,7 +125,7 @@ body {
     display: block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 1em; /* Ensure consistent font size */
+    font-size: 1em;
     transition: background-color 0.3s ease;
 }
 
@@ -131,28 +133,19 @@ body {
 .side-dropdown a:hover {
     color: #f5f7fa;
     background-color: #1c3a57;
-    border-radius: 8px; /* Optional: Rounded corners for a better look */
-    padding: 0.5em 1em; /* Ensures the hover effect box is larger */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow to the hover effect */
-}
-
-/* Position side-dropdown next to the corresponding link */
-#drSasseLink:hover + .side-dropdown,
-#drRembetskiLink:hover + .side-dropdown,
-.side-dropdown:hover {
-    display: block;
-    top: 0; /* Aligns correctly to the parent element */
-    left: 100%;
-    margin-left: 0; /* Prevents movement or overlap */
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* General hover effect for both links and side-dropdown */
 #drSasseLink:hover,
 #drRembetskiLink:hover,
 .side-dropdown:hover {
-    background-color: #1c3a57; /* Highlight background color when side-dropdown is hovered */
+    background-color: #1c3a57;
 }
 
+/* Hero Section */
 .hero-section {
     position: relative;
     background: url('images/building.jpg') no-repeat center center/cover;
@@ -204,6 +197,7 @@ body {
     background-color: #005b99;
 }
 
+/* Introduction Section */
 .introduction {
     padding: 50px 0;
     text-align: center;
@@ -236,6 +230,7 @@ body {
     background-color: #333a57;
 }
 
+/* Grid Layout */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -268,6 +263,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Testimonials Section */
 .testimonials {
     padding: 60px 0;
     background-color: #e8f1f8;
@@ -310,6 +306,7 @@ body {
     color: #005b99;
 }
 
+/* News Section */
 .news {
     padding: 60px 0;
     background-color: #f7fafc;
@@ -364,6 +361,7 @@ body {
     text-decoration: underline;
 }
 
+/* About Section */
 .about {
     padding: 60px 0;
 }
@@ -381,6 +379,7 @@ body {
     margin-bottom: 15px;
 }
 
+/* Surgeons Section */
 .surgeons {
     padding: 60px 0;
     background-color: #f7fafc;
@@ -426,42 +425,33 @@ body {
     color: #555;
 }
 
-.surgery-overview {
+/* Surgery Sections */
+.surgery-overview,
+.surgery-stats,
+.surgery-expectations {
     padding: 60px 0;
 }
 
-.surgery-overview h2 {
+.surgery-overview h2,
+.surgery-stats h2,
+.surgery-expectations h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
     color: #007acc;
     margin-bottom: 20px;
 }
 
-.surgery-overview p {
+.surgery-overview p,
+.surgery-stats ul,
+.surgery-expectations p {
     font-family: 'Lora', serif;
     font-size: 1.2em;
     margin-bottom: 15px;
 }
 
-/* Surgery Statistics Section */
-.surgery-stats {
-    padding: 60px 0;
-    background-color: #f7fafc;
-}
-
-.surgery-stats h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-    color: #007acc;
-    margin-bottom: 20px;
-}
-
 .surgery-stats ul {
     list-style: none;
     padding: 0;
-    font-family: 'Lora', serif;
-    font-size: 1.2em;
-    color: #333;
 }
 
 .surgery-stats ul li {
@@ -471,7 +461,7 @@ body {
 }
 
 .surgery-stats ul li::before {
-    content: "\2022"; /* Bullet point */
+    content: "\2022";
     color: #007acc;
     position: absolute;
     left: 0;
@@ -479,31 +469,7 @@ body {
     font-size: 1.5em;
 }
 
-/* Surgery Expectations Section */
-.surgery-expectations {
-    padding: 60px 0;
-}
-
-.surgery-expectations h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-    color: #007acc;
-    margin-bottom: 20px;
-}
-
-.surgery-expectations h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2em;
-    color: #005b99;
-    margin-bottom: 15px;
-}
-
-.surgery-expectations p {
-    font-family: 'Lora', serif;
-    font-size: 1.2em;
-    margin-bottom: 15px;
-}
-
+/* Contact Info Section */
 .contact-info {
     padding: 60px 0;
 }
@@ -596,6 +562,7 @@ body {
     border: none;
 }
 
+/* Footer Section */
 .footer {
     background-color: #1c3a57;
     padding: 20px 0;
@@ -630,4 +597,42 @@ body {
 
 .footer ul li a:hover {
     color: #f5f7fa;
+}
+
+/* Responsive Design Media Queries */
+@media screen and (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
