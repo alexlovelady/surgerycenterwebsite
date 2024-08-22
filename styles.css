@@ -411,6 +411,32 @@ body {
     object-fit: cover;
 }
 
+/* Styling for buttons inside surgeon-profile */
+.surgeon-profile button {
+    background-color: #1c3a57; /* Dark blue background */
+    color: white; /* White text */
+    padding: 12px 25px; /* Increased padding for better spacing */
+    border: none; /* Remove default border */
+    font-size: 1em; /* Standard button text size */
+    font-family: 'Montserrat', sans-serif; /* Consistent font style */
+    cursor: pointer; /* Pointer cursor to indicate clickability */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 5px; /* Slightly rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+}
+
+.surgeon-profile button:hover {
+    background-color: #005b99; /* Darker shade of blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow for depth on hover */
+}
+
+.surgeon-profile button:active {
+    background-color: #003f6b; /* Even darker shade for active state */
+    transform: translateY(1px); /* Pressed effect on click */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Reduced shadow on active click */
+}
+
 .surgeon-info h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8em;
