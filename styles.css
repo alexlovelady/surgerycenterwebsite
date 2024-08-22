@@ -204,57 +204,6 @@ body {
     background-color: #005b99;
 }
 
-.hero-section-about {
-    position: relative;
-    background: url('images/building.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 150px 0;
-    text-align: center;
-}
-
-.hero-section-about .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.hero-section-about .container {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-section-about h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.hero-section-about p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    font-family: 'Lora', serif;
-}
-
-.hero-section-about button {
-    background-color: #007acc;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    font-size: 1.2em;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
-}
-
-.hero-section-about button:hover {
-    background-color: #005b99;
-}
-
 .introduction {
     padding: 50px 0;
     text-align: center;

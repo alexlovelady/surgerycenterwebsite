@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laparoscopic Cholecystectomy - Sage Surgical Center</title>
+    <title>Surgery Center</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,21 +11,45 @@
     <header class="hero-section">
         <div class="overlay"></div>
         <div class="container">
-            <h1>Laparoscopic Cholecystectomy</h1>
-            <p>Safe and effective removal of the gallbladder through minimally invasive techniques.</p>
-            <button onclick="window.location.href='scheduleApptForm.html'">Schedule a Consultation</button>
-            <button onclick="window.location.href='patientInfoForm.html'" >Patients Information Form</button>
+            <h1>Welcome to Sage Surgical Center</h1>
+            <p>Mission Statement: Placeholder mission statement here.</p>
+            <button onclick="window.location.href='contact.html'">Schedule a Consultation</button>
+            <button onclick="window.location.href='https://www.paystation.com'">Pay Online</button>
         </div>
     </header>
     <nav class="navbar">
         <div class="container">
             <ul>
+                <img src="images/logo.png" alt="Sage Surgical Center Logo">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="window.location.href='about.html'">About</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-item-wrapper">
+                            <a href="drSasseAbout.html" id="drSasseLink">Dr. Sasse</a>
+                            <div class="side-dropdown">
+                                <a href="https://d2uvynux30dg3.cloudfront.net/sassesurgical.com/wp-content/uploads/2019/02/08141948/KSSA_CV_Kent_Sasse_02.05.2020.pdf">Dr. Sasse's CV</a>
+                            </div>
+                        </div>
+                        <a href="drNairiziAbout.html">Dr. Nairizi</a>
+                        <div class="dropdown-item-wrapper">
+                            <a href="drRembetskiAbout.html" id="drRembetskiLink">Dr. Rembetski</a>
+                            <div class="side-dropdown">
+                                <a href="https://nevadasurgical.com/wp-content/uploads/2022/11/Dr-Rembetski-CV.pdf">Dr. Rembetski's CV</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <li><a href="surgery1.html">Laparoscopic<br>Cholecystectomy</a></li>
-                <li><a href="surgery2.html">Knee<br>Arthroscopy</a></li>
-                <li><a href="surgery3.html">Breast<br>Augmentation</a></li>
-                <li><a href="surgery4.html">Coronary Artery<br>Bypass Grafting (CABG)</a></li>
+                <li><a href="surgery2.html">Baratric<br>Surgery</a></li>
+                <li><a href="surgery3.html">Gastroparesis<br>Treatments</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">Colorectal<br>Surgeries</button>
+                    <div class="dropdown-content">
+                        <a href="surgery4.html">Fecal Incontinence</a>
+                        <a href="surgery5.html">Urinary Incontinence</a>
+                    </div>
+                </div>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -67,5 +91,31 @@
             </ul>
         </div>
     </footer>
+    <script>
+        // JavaScript to dynamically position the side-dropdowns
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to position the side dropdowns
+            function positionDropdowns() {
+                const sasseLink = document.getElementById('drSasseLink');
+                const sasseDropdown = document.getElementById('sasseCV');
+                const rembetskiLink = document.getElementById('drRembetskiLink');
+                const rembetskiDropdown = document.getElementById('rembetskiCV');
+
+                if (sasseLink && sasseDropdown) {
+                    sasseDropdown.style.top = sasseLink.offsetTop + "px";
+                }
+
+                if (rembetskiLink && rembetskiDropdown) {
+                    rembetskiDropdown.style.top = rembetskiLink.offsetTop + "px";
+                }
+            }
+
+            // Initial positioning
+            positionDropdowns();
+
+            // Recalculate position on window resize
+            window.addEventListener('resize', positionDropdowns);
+        });
+    </script>
 </body>
 </html>
