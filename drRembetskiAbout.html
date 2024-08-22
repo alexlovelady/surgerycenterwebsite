@@ -11,8 +11,8 @@
     <header class="hero-section">
         <div class="overlay"></div>
         <div class="container">
-            <h1>About Us</h1>
-            <p>Committed to providing exceptional surgical care in a compassionate environment.</p>
+            <h1>Welcome to Sage Surgical Center</h1>
+            <p>Mission Statement: Placeholder mission statement here.</p>
             <button onclick="window.location.href='contact.html'">Schedule a Consultation</button>
             <button onclick="window.location.href='https://www.paystation.com'">Pay Online</button>
         </div>
@@ -20,14 +20,24 @@
     <nav class="navbar">
         <div class="container">
             <ul>
+                <img src="images/logo.png" alt="Sage Surgical Center Logo">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
                 <div class="dropdown">
-                    <button class="dropbtn">About</button>
+                    <button class="dropbtn" onclick="window.location.href='about.html'">About</button>
                     <div class="dropdown-content">
-                        <a href="drSasseAbout.html">Dr. Sasse</a>
+                        <div class="dropdown-item-wrapper">
+                            <a href="drSasseAbout.html" id="drSasseLink">Dr. Sasse</a>
+                            <div class="side-dropdown">
+                                <a href="https://d2uvynux30dg3.cloudfront.net/sassesurgical.com/wp-content/uploads/2019/02/08141948/KSSA_CV_Kent_Sasse_02.05.2020.pdf">Dr. Sasse's CV</a>
+                            </div>
+                        </div>
                         <a href="drNairiziAbout.html">Dr. Nairizi</a>
-                        <a href="drRembetskiAbout.html">Dr. Rembetski</a>
+                        <div class="dropdown-item-wrapper">
+                            <a href="drRembetskiAbout.html" id="drRembetskiLink">Dr. Rembetski</a>
+                            <div class="side-dropdown">
+                                <a href="https://nevadasurgical.com/wp-content/uploads/2022/11/Dr-Rembetski-CV.pdf">Dr. Rembetski's CV</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <li><a href="surgery1.html">Laparoscopic<br>Cholecystectomy</a></li>
@@ -38,7 +48,6 @@
             </ul>
         </div>
     </nav>
-    
     <section class="surgeons container">
         <h2>Meet Our Surgeons</h2>
 
@@ -47,7 +56,17 @@
             <div class="surgeon-info">
                 <h3>Dr. Rembetski</h3>
                 <p>----------Surgeon Type---------</p>
-                <p>Bio---------------------------------------------------------------------------------------------------------</p>
+                <p>Dr. Brian Rembetski is a board-certified surgeon specializing in general and laparoscopic surgery with a passion for providing high-quality care to his patients. With over [number] years of experience, Dr. Rembetski has developed expertise in a wide range of surgical procedures, including minimally invasive techniques, complex abdominal surgeries, and emergency surgical care.
+
+                    After earning his medical degree from [Medical School], Dr. Rembetski completed his residency at [Residency Hospital], where he honed his skills in both general and specialized surgical practices. He is committed to staying at the forefront of surgical advancements, regularly participating in continuing education and training programs.
+                    
+                    Throughout his career, Dr. Rembetski has been recognized for his meticulous surgical technique and compassionate approach to patient care. He is a member of several professional organizations, including [List of Professional Organizations], and has contributed to numerous publications and presentations within the field of surgery.
+                    
+                    At Nevada Surgical, Dr. Rembetski is dedicated to delivering personalized care, ensuring that each patient receives the most effective and least invasive treatment possible. His commitment to excellence is evident in his patient outcomes and the trust he has earned from both his patients and colleagues.
+                    
+                    In addition to his clinical practice, Dr. Rembetski is actively involved in mentoring the next generation of surgeons, sharing his knowledge and experience to help shape the future of the field.
+                    
+                    When not in the operating room, Dr. Rembetski enjoys [Personal Interests/Hobbies], which allow him to maintain a well-rounded and balanced life.</p>
             </div>
         </div>
 
@@ -61,5 +80,31 @@
             </ul>
         </div>
     </footer>
+    <script>
+        // JavaScript to dynamically position the side-dropdowns
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to position the side dropdowns
+            function positionDropdowns() {
+                const sasseLink = document.getElementById('drSasseLink');
+                const sasseDropdown = document.getElementById('sasseCV');
+                const rembetskiLink = document.getElementById('drRembetskiLink');
+                const rembetskiDropdown = document.getElementById('rembetskiCV');
+
+                if (sasseLink && sasseDropdown) {
+                    sasseDropdown.style.top = sasseLink.offsetTop + "px";
+                }
+
+                if (rembetskiLink && rembetskiDropdown) {
+                    rembetskiDropdown.style.top = rembetskiLink.offsetTop + "px";
+                }
+            }
+
+            // Initial positioning
+            positionDropdowns();
+
+            // Recalculate position on window resize
+            window.addEventListener('resize', positionDropdowns);
+        });
+    </script>
 </body>
 </html>

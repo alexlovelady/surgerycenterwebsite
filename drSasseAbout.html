@@ -11,8 +11,8 @@
     <header class="hero-section">
         <div class="overlay"></div>
         <div class="container">
-            <h1>About Us</h1>
-            <p>Committed to providing exceptional surgical care in a compassionate environment.</p>
+            <h1>Welcome to Sage Surgical Center</h1>
+            <p>Mission Statement: Placeholder mission statement here.</p>
             <button onclick="window.location.href='contact.html'">Schedule a Consultation</button>
             <button onclick="window.location.href='https://www.paystation.com'">Pay Online</button>
         </div>
@@ -20,8 +20,26 @@
     <nav class="navbar">
         <div class="container">
             <ul>
+                <img src="images/logo.png" alt="Sage Surgical Center Logo">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="window.location.href='about.html'">About</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-item-wrapper">
+                            <a href="drSasseAbout.html" id="drSasseLink">Dr. Sasse</a>
+                            <div class="side-dropdown">
+                                <a href="https://d2uvynux30dg3.cloudfront.net/sassesurgical.com/wp-content/uploads/2019/02/08141948/KSSA_CV_Kent_Sasse_02.05.2020.pdf">Dr. Sasse's CV</a>
+                            </div>
+                        </div>
+                        <a href="drNairiziAbout.html">Dr. Nairizi</a>
+                        <div class="dropdown-item-wrapper">
+                            <a href="drRembetskiAbout.html" id="drRembetskiLink">Dr. Rembetski</a>
+                            <div class="side-dropdown">
+                                <a href="https://nevadasurgical.com/wp-content/uploads/2022/11/Dr-Rembetski-CV.pdf">Dr. Rembetski's CV</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <li><a href="surgery1.html">Laparoscopic<br>Cholecystectomy</a></li>
                 <li><a href="surgery2.html">Knee<br>Arthroscopy</a></li>
                 <li><a href="surgery3.html">Breast<br>Augmentation</a></li>
@@ -30,7 +48,6 @@
             </ul>
         </div>
     </nav>
-    
     <section class="surgeons container">
         <h2>Meet Our Surgeons</h2>
 
@@ -65,5 +82,31 @@
             </ul>
         </div>
     </footer>
+    <script>
+        // JavaScript to dynamically position the side-dropdowns
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to position the side dropdowns
+            function positionDropdowns() {
+                const sasseLink = document.getElementById('drSasseLink');
+                const sasseDropdown = document.getElementById('sasseCV');
+                const rembetskiLink = document.getElementById('drRembetskiLink');
+                const rembetskiDropdown = document.getElementById('rembetskiCV');
+
+                if (sasseLink && sasseDropdown) {
+                    sasseDropdown.style.top = sasseLink.offsetTop + "px";
+                }
+
+                if (rembetskiLink && rembetskiDropdown) {
+                    rembetskiDropdown.style.top = rembetskiLink.offsetTop + "px";
+                }
+            }
+
+            // Initial positioning
+            positionDropdowns();
+
+            // Recalculate position on window resize
+            window.addEventListener('resize', positionDropdowns);
+        });
+    </script>
 </body>
 </html>
