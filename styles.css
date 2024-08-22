@@ -10,15 +10,14 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 0px;
     text-align: center;
 }
 
 .navbar {
     background-color: #1c3a57;
-    padding: 1em 0;
-    position: static;
-    top: 0;
+    padding: 0.1em 0;
+    position: relative; /* Ensure the navbar itself is positioned relative to allow absolute positioning of dropdowns */
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -29,18 +28,129 @@ body {
     justify-content: space-around;
     padding: 0;
     margin: 0;
+    align-items: center;
 }
 
-.navbar ul li a {
+.navbar ul li {
+    position: relative; /* Each li is positioned relative to allow absolute positioning of the dropdown within it */
+}
+
+.navbar ul li a, .dropbtn {
     color: white;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    font-size: 1em; /* Set a consistent font size */
     transition: color 0.3s ease;
+    padding: 0.5em 0; /* Adjust padding to control spacing */
+    line-height: 1.5; /* Make sure the line height is consistent */
+    background: none; /* Remove any default button styling */
+    border: none; /* Remove any border that might be present on buttons */
+    cursor: pointer; /* Ensure the cursor is the same for links and buttons */
+    display: inline-flex; /* Ensure it behaves like a link */
+    align-items: center; /* Vertically center the text */
 }
 
-.navbar ul li a:hover {
+.navbar ul li a:hover, .dropbtn:hover, .dropdown-content a:hover, .side-dropdown a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 8px; /* Rounded corners for better aesthetics */
+    padding: 0.5em 1em; /* Larger padding for a bigger hover effect box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slight shadow to emphasize the hover */
+}
+
+/* Dropdown About Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f5f7fa;
+    min-width: 160px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    top: 100%; /* Position dropdown below the navbar */
+    left: 0; /* Align dropdown with the parent element */
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1em; /* Ensure consistent font size */
+    transition: background-color 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: white;
+    color: black;
+}
+
+.dropdown-item-wrapper {
+    position: relative;
+}
+
+.dropdown-item-wrapper:hover .side-dropdown {
+    display: block;
+}
+
+/* Side Dropdown for CV */
+.side-dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Aligns the side dropdown to the right of the main item */
+    margin-left: 0; /* Prevents any unnecessary gap */
+    background-color: #f5f7fa; /* Keeps the same background as dropdown-content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+    z-index: 1;
+    display: none; /* Initially hidden */
+    white-space: nowrap;
+}
+
+.side-dropdown a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1em; /* Ensure consistent font size */
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover,
+.side-dropdown a:hover {
     color: #f5f7fa;
+    background-color: #1c3a57;
+    border-radius: 8px; /* Optional: Rounded corners for a better look */
+    padding: 0.5em 1em; /* Ensures the hover effect box is larger */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow to the hover effect */
+}
+
+/* Position side-dropdown next to the corresponding link */
+#drSasseLink:hover + .side-dropdown,
+#drRembetskiLink:hover + .side-dropdown,
+.side-dropdown:hover {
+    display: block;
+    top: 0; /* Aligns correctly to the parent element */
+    left: 100%;
+    margin-left: 0; /* Prevents movement or overlap */
+}
+
+/* General hover effect for both links and side-dropdown */
+#drSasseLink:hover,
+#drRembetskiLink:hover,
+.side-dropdown:hover {
+    background-color: #1c3a57; /* Highlight background color when side-dropdown is hovered */
 }
 
 .hero-section {
@@ -91,6 +201,57 @@ body {
 }
 
 .hero-section button:hover {
+    background-color: #005b99;
+}
+
+.hero-section-about {
+    position: relative;
+    background: url('images/building.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 150px 0;
+    text-align: center;
+}
+
+.hero-section-about .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-section-about .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section-about h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-section-about p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-family: 'Lora', serif;
+}
+
+.hero-section-about button {
+    background-color: #007acc;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.hero-section-about button:hover {
     background-color: #005b99;
 }
 
@@ -279,7 +440,7 @@ body {
 .surgeons h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
-    color: #007acc;
+    color: #555;
     margin-bottom: 40px;
     text-align: center;
 }
