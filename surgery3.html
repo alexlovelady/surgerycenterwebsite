@@ -3,82 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surgery Center</title>
+    <title>Chronic Pain Treatments - Sage Surgical Center</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="header.js" defer></script>
 </head>
 <body>
-    <header class="hero-section">
-        <div class="overlay"></div>
-        <div class="container">
-            <h1>Welcome to Sage Surgical Center</h1>
-            <p>Mission Statement: Placeholder mission statement here.</p>
-            <button onclick="window.location.href='contact.html'">Schedule a Consultation</button>
-            <button onclick="window.location.href='https://www.paystation.com'">Pay Online</button>
-        </div>
-    </header>
-    <nav class="navbar">
-        <div class="container">
-            <ul>
-                <img src="images/logo.png" alt="Sage Surgical Center Logo">
-                <li><a href="index.html">Home</a></li>
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="window.location.href='about.html'">About</button>
-                    <div class="dropdown-content">
-                        <div class="dropdown-item-wrapper">
-                            <a href="drSasseAbout.html" id="drSasseLink">Dr. Sasse</a>
-                            <div class="side-dropdown">
-                                <a href="https://d2uvynux30dg3.cloudfront.net/sassesurgical.com/wp-content/uploads/2019/02/08141948/KSSA_CV_Kent_Sasse_02.05.2020.pdf">Dr. Sasse's CV</a>
-                            </div>
-                        </div>
-                        <a href="drNairiziAbout.html">Dr. Nairizi</a>
-                        <div class="dropdown-item-wrapper">
-                            <a href="drRembetskiAbout.html" id="drRembetskiLink">Dr. Rembetski</a>
-                            <div class="side-dropdown">
-                                <a href="https://nevadasurgical.com/wp-content/uploads/2022/11/Dr-Rembetski-CV.pdf">Dr. Rembetski's CV</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <li><a href="surgery1.html">Laparoscopic<br>Cholecystectomy</a></li>
-                <li><a href="surgery2.html">Baratric<br>Surgery</a></li>
-                <li><a href="surgery3.html">Gastroparesis<br>Treatments</a></li>
-                <div class="dropdown">
-                    <button class="dropbtn">Colorectal<br>Surgeries</button>
-                    <div class="dropdown-content">
-                        <a href="surgery4.html">Fecal Incontinence</a>
-                        <a href="surgery5.html">Urinary Incontinence</a>
-                    </div>
-                </div>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
     <section class="surgery-overview container">
         <h2>Overview</h2>
-        <p>Gastroparesis is a condition where the stomach's ability to empty its contents is delayed, causing nausea, vomiting, and bloating. Treatment options include dietary changes, medications, and, in severe cases, procedures like gastric electrical stimulation or surgery to facilitate stomach emptying.</p>
+        <p>Chronic pain is a persistent condition that affects millions of people. Treatment options vary depending on the type and source of pain, and they may include medications, physical therapy, nerve blocks, and surgical interventions.</p>
     </section>
     
     <section class="surgery-stats container">
         <h2>Statistics</h2>
         <ul>
-            <li>Gastroparesis affects approximately 5 million people in the United States.</li>
-            <li>Gastric electrical stimulation has a success rate of 60-70% in reducing symptoms in refractory cases.</li>
-            <li>Patients undergoing surgical interventions typically see improvements in quality of life and symptom management.</li>
+            <li>Chronic pain affects over 50 million adults in the United States.</li>
+            <li>About 20 million people suffer from high-impact chronic pain that limits daily activities.</li>
+            <li>Multimodal pain management approaches have shown to improve outcomes significantly.</li>
         </ul>
     </section>
     
     <section class="surgery-expectations container">
         <h2>What to Expect</h2>
         
-        <h3>Pre-Operative Instructions</h3>
-        <p>Before surgery, patients may undergo tests such as gastric emptying studies. Pre-operative preparation includes fasting and possibly adjusting medications that affect stomach motility.</p>
+        <h3>Pre-Treatment Instructions</h3>
+        <p>Prior to initiating treatment, patients will undergo a comprehensive evaluation to determine the best course of action. This may include diagnostic imaging, lab tests, and consultations with pain management specialists.</p>
     
         <h3>The Procedure</h3>
-        <p>The specific procedure depends on the treatment approach. Gastric electrical stimulation involves implanting a device that sends electrical pulses to the stomach muscles. Other surgical options may include pyloroplasty, which widens the opening between the stomach and small intestine.</p>
+        <p>Depending on the specific treatment, procedures may range from minimally invasive injections to more extensive surgical interventions. Nerve blocks, spinal cord stimulation, and intrathecal pain pumps are some of the advanced options available.</p>
     
-        <h3>Post-Operative Care</h3>
-        <p>Post-operative care includes monitoring for complications such as infection or device malfunction. Dietary adjustments and follow-up appointments are essential for managing symptoms and ensuring the effectiveness of the treatment.</p>
+        <h3>Post-Treatment Care</h3>
+        <p>Post-treatment care is crucial for effective pain management. This may involve follow-up appointments, physical therapy, medication adjustments, and lifestyle modifications to help manage and reduce pain over time.</p>
     </section>
 
     <footer class="footer">
@@ -91,31 +46,5 @@
             </ul>
         </div>
     </footer>
-    <script>
-        // JavaScript to dynamically position the side-dropdowns
-        document.addEventListener('DOMContentLoaded', function() {
-            // Function to position the side dropdowns
-            function positionDropdowns() {
-                const sasseLink = document.getElementById('drSasseLink');
-                const sasseDropdown = document.getElementById('sasseCV');
-                const rembetskiLink = document.getElementById('drRembetskiLink');
-                const rembetskiDropdown = document.getElementById('rembetskiCV');
-
-                if (sasseLink && sasseDropdown) {
-                    sasseDropdown.style.top = sasseLink.offsetTop + "px";
-                }
-
-                if (rembetskiLink && rembetskiDropdown) {
-                    rembetskiDropdown.style.top = rembetskiLink.offsetTop + "px";
-                }
-            }
-
-            // Initial positioning
-            positionDropdowns();
-
-            // Recalculate position on window resize
-            window.addEventListener('resize', positionDropdowns);
-        });
-    </script>
 </body>
 </html>

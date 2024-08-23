@@ -6,54 +6,9 @@
     <title>Dr. Kent Sasse - Sage Surgical Center</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="header.js" defer></script>
 </head>
 <body>
-    <header class="hero-section">
-        <div class="overlay"></div>
-        <div class="container">
-            <h1>Welcome to Sage Surgical Center</h1>
-            <p>Mission Statement: Placeholder mission statement here.</p>
-            <button onclick="window.location.href='contact.html'">Schedule a Consultation</button>
-            <button onclick="window.location.href='https://www.paystation.com'">Pay Online</button>
-        </div>
-    </header>
-    <nav class="navbar">
-        <div class="container">
-            <ul>
-                <img src="images/logo.png" alt="Sage Surgical Center Logo">
-                <li><a href="index.html">Home</a></li>
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="window.location.href='about.html'">About</button>
-                    <div class="dropdown-content">
-                        <div class="dropdown-item-wrapper">
-                            <a href="drSasseAbout.html" id="drSasseLink">Dr. Sasse</a>
-                            <div class="side-dropdown">
-                                <a href="https://d2uvynux30dg3.cloudfront.net/sassesurgical.com/wp-content/uploads/2019/02/08141948/KSSA_CV_Kent_Sasse_02.05.2020.pdf">Dr. Sasse's CV</a>
-                            </div>
-                        </div>
-                        <a href="drNairiziAbout.html">Dr. Nairizi</a>
-                        <div class="dropdown-item-wrapper">
-                            <a href="drRembetskiAbout.html" id="drRembetskiLink">Dr. Rembetski</a>
-                            <div class="side-dropdown">
-                                <a href="https://nevadasurgical.com/wp-content/uploads/2022/11/Dr-Rembetski-CV.pdf">Dr. Rembetski's CV</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <li><a href="surgery1.html">Laparoscopic<br>Cholecystectomy</a></li>
-                <li><a href="surgery2.html">Baratric<br>Surgery</a></li>
-                <li><a href="surgery3.html">Gastroparesis<br>Treatments</a></li>
-                <div class="dropdown">
-                    <button class="dropbtn">Colorectal<br>Surgeries</button>
-                    <div class="dropdown-content">
-                        <a href="surgery4.html">Fecal Incontinence</a>
-                        <a href="surgery5.html">Urinary Incontinence</a>
-                    </div>
-                </div>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
     <section class="surgeons container">
         <h2>Meet Our Surgeons</h2>
 
@@ -61,6 +16,7 @@
             <img src="images/DrSasse.png" alt="Dr. Kent Sasse">
             <div class="surgeon-info">
                 <h3>Dr. Kent Sasse</h3>
+                
                 <p>Bariatric Surgeon</p>
                 <p>Dr. Sasse grew up in Wisconsin, the youngest of two boys, and he attended Spanish-speaking schools in Central America for a part of high school and learned Spanish. He witnessed poverty but also witnessed the profound impact one can make in the lives of others through caring and service.
 
@@ -74,7 +30,9 @@
                     
                     Weight-Loss Surgery: Which One is Right for You?Medical school brought invaluable challenges, the pursuit of research, several publications in Bioethics and much more. Dr. Sasse realized top honors by finishing at the top of his class. During medical school he volunteered time in a dilapidated hospital in Nepal and which helped finalize his desire to become a surgeon. During his UCSF surgery training, Dr. Sasse expressed a great interest in teaching and ultimately won the All-Campus Teaching Award as a senior resident. He later completed Fellowship training at the Lahey Clinic in Boston, Massachusetts, before relocating to beautiful northern Nevada to develop his practice.
                     
-                    Father of five kids, chauffeur, cook, and parent to them all… Today his interests include travel, running long distance races, teaching medical students and residents, serving as director of the Obesity Prevention Foundation, and medical research. He is an acclaimed award winning author of five books. His latest work is the acclaimed book, “The Type 2 Diabetes Cure”.</p>
+                    Father of five kids, chauffeur, cook, and parent to them all… Today his interests include travel, running long distance races, teaching medical students and residents, serving as director of the Obesity Prevention Foundation, and medical research. He is an acclaimed award winning author of five books. His latest work is the acclaimed book, “The Type 2 Diabetes Cure”.
+                </p>
+                <button onclick="window.location.href='https://d2uvynux30dg3.cloudfront.net/sassesurgical.com/wp-content/uploads/2019/02/08141948/KSSA_CV_Kent_Sasse_02.05.2020.pdf'">View CV</button>
             </div>
         </div>
 
@@ -88,31 +46,5 @@
             </ul>
         </div>
     </footer>
-    <script>
-        // JavaScript to dynamically position the side-dropdowns
-        document.addEventListener('DOMContentLoaded', function() {
-            // Function to position the side dropdowns
-            function positionDropdowns() {
-                const sasseLink = document.getElementById('drSasseLink');
-                const sasseDropdown = document.getElementById('sasseCV');
-                const rembetskiLink = document.getElementById('drRembetskiLink');
-                const rembetskiDropdown = document.getElementById('rembetskiCV');
-
-                if (sasseLink && sasseDropdown) {
-                    sasseDropdown.style.top = sasseLink.offsetTop + "px";
-                }
-
-                if (rembetskiLink && rembetskiDropdown) {
-                    rembetskiDropdown.style.top = rembetskiLink.offsetTop + "px";
-                }
-            }
-
-            // Initial positioning
-            positionDropdowns();
-
-            // Recalculate position on window resize
-            window.addEventListener('resize', positionDropdowns);
-        });
-    </script>
 </body>
 </html>

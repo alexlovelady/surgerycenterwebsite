@@ -6,54 +6,9 @@
     <title>Dr. Ali Nairizi - Sage Surgical Center</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="header.js" defer></script>
 </head>
 <body>
-    <header class="hero-section">
-        <div class="overlay"></div>
-        <div class="container">
-            <h1>About Us</h1>
-            <p>Committed to providing exceptional surgical care in a compassionate environment.</p>
-            <button onclick="window.location.href='contact.html'">Schedule a Consultation</button>
-            <button onclick="window.location.href='https://www.paystation.com'">Pay Online</button>
-        </div>
-    </header>
-    <nav class="navbar">
-        <div class="container">
-            <ul>
-                <img src="images/logo.png" alt="Sage Surgical Center Logo">
-                <li><a href="index.html">Home</a></li>
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="window.location.href='about.html'">About</button>
-                    <div class="dropdown-content">
-                        <div class="dropdown-item-wrapper">
-                            <a href="drSasseAbout.html" id="drSasseLink">Dr. Sasse</a>
-                            <div class="side-dropdown">
-                                <a href="https://d2uvynux30dg3.cloudfront.net/sassesurgical.com/wp-content/uploads/2019/02/08141948/KSSA_CV_Kent_Sasse_02.05.2020.pdf">Dr. Sasse's CV</a>
-                            </div>
-                        </div>
-                        <a href="drNairiziAbout.html">Dr. Nairizi</a>
-                        <div class="dropdown-item-wrapper">
-                            <a href="drRembetskiAbout.html" id="drRembetskiLink">Dr. Rembetski</a>
-                            <div class="side-dropdown">
-                                <a href="https://nevadasurgical.com/wp-content/uploads/2022/11/Dr-Rembetski-CV.pdf">Dr. Rembetski's CV</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <li><a href="surgery1.html">Laparoscopic<br>Cholecystectomy</a></li>
-                <li><a href="surgery2.html">Baratric<br>Surgery</a></li>
-                <li><a href="surgery3.html">Gastroparesis<br>Treatments</a></li>
-                <div class="dropdown">
-                    <button class="dropbtn">Colorectal<br>Surgeries</button>
-                    <div class="dropdown-content">
-                        <a href="surgery4.html">Fecal Incontinence</a>
-                        <a href="surgery5.html">Urinary Incontinence</a>
-                    </div>
-                </div>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
     <section class="surgeons container">
         <h2>Meet Our Surgeons</h2>
 
@@ -61,7 +16,7 @@
             <img src="images/DrNairizi.png" alt="Dr. Ali Nairizi">
             <div class="surgeon-info">
                 <h3>Dr. Ali Nairizi</h3>
-                <p>----------Surgeon Type---------</p>
+                <p>Pain Management Specialist/Anesthesiologist</p>
                 <p>Dr. Nairizi is a Board Certified Interventional Pain Specialist and Board Certified Anesthesiologist who is dedicated to treating patients with a wide array of chronic pain conditions, 
                     such as back, neck, shoulder, hip and knee pain. He is very passionate about his patients and his goal is to provide them with the best care possible. He believes that a comprehensive 
                     and multidisciplinary approach that is tailored to the patient’s needs provides the best results. He also understands that successful treatment of painful conditions depends on identifying 
@@ -79,31 +34,5 @@
             </ul>
         </div>
     </footer>
-    <script>
-        // JavaScript to dynamically position the side-dropdowns
-        document.addEventListener('DOMContentLoaded', function() {
-            // Function to position the side dropdowns
-            function positionDropdowns() {
-                const sasseLink = document.getElementById('drSasseLink');
-                const sasseDropdown = document.getElementById('sasseCV');
-                const rembetskiLink = document.getElementById('drRembetskiLink');
-                const rembetskiDropdown = document.getElementById('rembetskiCV');
-
-                if (sasseLink && sasseDropdown) {
-                    sasseDropdown.style.top = sasseLink.offsetTop + "px";
-                }
-
-                if (rembetskiLink && rembetskiDropdown) {
-                    rembetskiDropdown.style.top = rembetskiLink.offsetTop + "px";
-                }
-            }
-
-            // Initial positioning
-            positionDropdowns();
-
-            // Recalculate position on window resize
-            window.addEventListener('resize', positionDropdowns);
-        });
-    </script>
 </body>
 </html>
