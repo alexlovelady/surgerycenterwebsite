@@ -475,24 +475,45 @@ body {
     margin-bottom: 15px;
 }
 
+/* Surgery Statistics Section */
+.surgery-stats {
+    text-align: left; /* Align the text to the left */
+    padding: 60px 0;
+    background-color: #f7fafc;
+}
+
+.surgery-stats h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #007acc;
+    margin-bottom: 20px;
+    text-align: center; /* Keep the header centered */
+}
+
 .surgery-stats ul {
-    list-style: none;
+    list-style: none; /* Remove default list style */
     padding: 0;
+    font-family: 'Lora', serif;
+    font-size: 1.2em;
+    color: #333;
+    text-align: left; /* Ensure list text is left-aligned */
 }
 
 .surgery-stats ul li {
     margin-bottom: 10px;
     position: relative;
-    padding-left: 20px;
+    padding-left: 25px; /* Space for the bullet */
+    text-align: left; /* Left-align the text within the list item */
 }
 
 .surgery-stats ul li::before {
-    content: "\2022";
+    content: "\2022"; /* Bullet point */
     color: #007acc;
     position: absolute;
-    left: 0;
+    left: 0; /* Position the bullet at the start of the line */
     top: 0;
     font-size: 1.5em;
+    line-height: 1.2em; /* Ensure bullet aligns with the text */
 }
 
 /* Contact Info Section */
@@ -512,12 +533,17 @@ body {
     font-size: 1.2em;
     margin-bottom: 15px;
     color: #333;
+    text-align: left;
 }
 
 /* Contact Form Section */
 .contact-form {
-    padding: 60px 0;
-    background-color: #f7fafc;
+    padding: 60px 20px;
+    background-color: #f7fafc; /* Light background color */
+    border: 2px solid #007acc; /* Border around the form */
+    border-radius: 10px; /* Rounded corners for a smooth look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 40px; /* Space below the form to separate it from other elements */
 }
 
 .contact-form h2 {
