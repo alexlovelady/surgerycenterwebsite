@@ -551,40 +551,36 @@ body {
     margin-bottom: 10px;
 }
 
-/* Container to align contact details (info + map) and form side by side */
+/* Container to align contact details and map side by side */
 .contact-container {
     display: flex;
-    justify-content: space-between; /* Even spacing between the two columns */
-    align-items: flex-start; /* Align items to the top */
-    gap: 60px; /* Space between the two sections */
+    justify-content: space-between; /* Distribute space evenly between the two sections */
+    align-items: flex-start; /* Align the items at the top */
+    gap: 20px; /* Add some space between the two sections */
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    padding: 60px 0; /* Padding around the contact container */
+    margin-top: 40px;
 }
 
-/* Styling for individual sections within the contact container */
-.contact-details, .contact-form {
-    flex: 1; /* Allows both sections to take equal space */
-    min-width: 300px; /* Minimum width to ensure both are readable on smaller screens */
+/* Contact details section */
+.contact-details {
+    flex: 1; /* Allow the contact details to take up equal space */
+    min-width: 300px; /* Ensure the section does not get too narrow */
+    text-align: left; /* Align the text to the left */
 }
 
-/* Contact Info Section */
-.contact-info {
-    padding: 20px 0;
+/* Map section */
+.map {
+    flex: 1; /* Allow the map to take up equal space */
+    min-width: 300px; /* Ensure the section does not get too narrow */
+    padding: 20px; /* Add some padding to the map */
+    margin-bottom: 40px; /* Space below the map to separate it from other elements */
 }
 
-.contact-info h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-    color: #007acc;
-    margin-bottom: 20px;
-}
-
-.contact-info p {
-    font-family: 'Lora', serif;
-    font-size: 1.2em;
-    margin-bottom: 15px;
-    color: #333;
-    text-align: left;
+/* Map container to ensure it fits within the section */
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
 }
 
 /* Contact Form Section */
