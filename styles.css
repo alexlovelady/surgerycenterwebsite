@@ -456,69 +456,99 @@ body {
     color: #555;
 }
 
-/* Surgery Sections */
-.surgery-overview,
-.surgery-stats,
-.surgery-expectations {
-    padding: 60px 0;
+/* Surgery Info Wrapper */
+.surgery-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-.surgery-overview h2,
-.surgery-stats h2,
+.surgery-info-wrapper > div {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    flex: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Page Title Styling */
+.page-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em; /* Larger font size for prominence */
+    color: #007acc; /* Use the theme color for consistency */
+    text-align: center; /* Center-align the title */
+    margin-top: 40px; /* Space above the title */
+    margin-bottom: 40px; /* Space below the title */
+    text-transform: uppercase; /* Make the text uppercase for emphasis */
+    letter-spacing: 2px; /* Add some letter spacing for readability */
+    padding-bottom: 10px; /* Padding below the text to separate it from the border */
+}
+
+/* Section Headings */
+.surgery-info-wrapper h2,
 .surgery-expectations h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #007acc;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-.surgery-overview p,
-.surgery-stats ul,
-.surgery-expectations p {
-    font-family: 'Lora', serif;
-    font-size: 1.2em;
-    margin-bottom: 15px;
+/* Overview Paragraph */
+.surgery-overview p {
+    font-size: 1.1em;
+    text-align: justify;
+    margin-bottom: 0;
 }
 
-/* Surgery Statistics Section */
-.surgery-stats {
-    text-align: left; /* Align the text to the left */
-    padding: 60px 0;
-    background-color: #f7fafc;
-}
-
-.surgery-stats h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-    color: #007acc;
-    margin-bottom: 20px;
-    text-align: center; /* Keep the header centered */
-}
-
+/* Statistics List */
 .surgery-stats ul {
-    list-style: none; /* Remove default list style */
+    list-style: none;
     padding: 0;
-    font-family: 'Lora', serif;
-    font-size: 1.2em;
-    color: #333;
-    text-align: left; /* Ensure list text is left-aligned */
 }
 
 .surgery-stats ul li {
-    margin-bottom: 10px;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    padding-left: 25px;
     position: relative;
-    padding-left: 25px; /* Space for the bullet */
-    text-align: left; /* Left-align the text within the list item */
+    text-align: left;
 }
 
 .surgery-stats ul li::before {
-    content: "\2022"; /* Bullet point */
-    color: #007acc;
+    content: "\2022";
     position: absolute;
-    left: 0; /* Position the bullet at the start of the line */
-    top: 0;
+    left: 0;
+    color: #007acc;
     font-size: 1.5em;
-    line-height: 1.2em; /* Ensure bullet aligns with the text */
+    line-height: 1;
+}
+
+/* What to Expect Section */
+.surgery-expectations {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.surgery-expectations h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: #007acc;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.surgery-expectations p {
+    font-size: 1.1em;
+    text-align: justify;
+    margin-bottom: 10px;
 }
 
 /* Container to align contact details (info + map) and form side by side */
@@ -762,6 +792,10 @@ body {
 
     .picture-wrapper {
         grid-template-columns: 1fr; /* Stacks images in a single column on smaller screens */
+    }
+
+    .surgery-info-wrapper {
+        flex-direction: column;
     }
 }
 
