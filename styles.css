@@ -75,6 +75,18 @@ body {
     z-index: 1;
     top: 100%;
     left: 0;
+    border-radius: 8px; /* Ensure dropdown content has rounded corners */
+}
+
+/* Ensure the dropbtn's styles are applied consistently when hovering over dropdown content */
+.dropdown-content a:hover,
+.side-dropdown a:hover,
+.dropdown:hover .dropbtn {
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -86,6 +98,7 @@ body {
     font-weight: 600;
     font-size: 1em;
     transition: background-color 0.3s ease;
+    border-radius: 8px; /* Ensure individual items have rounded corners */
 }
 
 .dropdown:hover .dropdown-content {
@@ -95,6 +108,9 @@ body {
 .dropdown:hover .dropbtn {
     background-color: white;
     color: black;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-item-wrapper {
