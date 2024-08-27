@@ -400,6 +400,25 @@ body {
     margin-bottom: 15px;
 }
 
+/* Privacy Section */
+.privacy {
+    padding: 60px 0;
+}
+
+.privacy h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+.privacy p {
+    font-family: 'Lora', serif;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
 /* Surgeons Section */
 .surgeons {
     padding: 60px 0;
