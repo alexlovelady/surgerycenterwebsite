@@ -254,7 +254,7 @@ body {
 /* Targeting the last item(s) */
 .grid > :nth-child(1):nth-last-child(odd),
 .grid > :nth-child(2):nth-last-child(odd) ~ :nth-child(1) {
-    grid-column: span 2;
+    grid-column: span 1;
     justify-self: center;
 }
 
