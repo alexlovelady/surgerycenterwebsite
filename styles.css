@@ -1,6 +1,6 @@
 /* Base Styles */
 body {
-    font-family: 'Montserrat', 'Arial', sans-serif; /* Set the primary font-family for the entire site */
+    font-family: 'Montserrat', 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -30,7 +30,7 @@ body {
     padding: 0;
     margin: 0;
     align-items: center;
-    flex-wrap: wrap; /* Added for better responsiveness */
+    flex-wrap: wrap;
 }
 
 .navbar ul li {
@@ -74,10 +74,9 @@ body {
     z-index: 1;
     top: 100%;
     left: 0;
-    border-radius: 8px; /* Ensure dropdown content has rounded corners */
+    border-radius: 8px;
 }
 
-/* Ensure the dropbtn's styles are applied consistently when hovering over dropdown content */
 .dropdown-content a:hover,
 .side-dropdown a:hover,
 .dropdown:hover .dropbtn {
@@ -96,7 +95,7 @@ body {
     font-weight: 600;
     font-size: 1em;
     transition: background-color 0.3s ease;
-    border-radius: 8px; /* Ensure individual items have rounded corners */
+    border-radius: 8px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -119,7 +118,6 @@ body {
     display: block;
 }
 
-/* Side Dropdown for CV */
 .side-dropdown {
     position: absolute;
     top: 0;
@@ -151,7 +149,6 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* General hover effect for both links and side-dropdown */
 #drSasseLink:hover,
 #drRembetskiLink:hover,
 .side-dropdown:hover {
@@ -186,10 +183,10 @@ body {
     font-size: 2.5em;
     margin-bottom: 20px;
     text-shadow: 
-        1px 1px 2px rgba(0, 0, 0, 0.3), /* Slight shadow to the bottom-right */
-       -1px -1px 2px rgba(0, 0, 0, 0.3), /* Slight shadow to the top-left */
-        1px -1px 2px rgba(0, 0, 0, 0.3), /* Slight shadow to the top-right */
-       -1px 1px 2px rgba(0, 0, 0, 0.3); /* Slight shadow to the bottom-left */
+        1px 1px 2px rgba(0, 0, 0, 0.3),
+       -1px -1px 2px rgba(0, 0, 0, 0.3),
+        1px -1px 2px rgba(0, 0, 0, 0.3),
+       -1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-section p {
@@ -251,7 +248,6 @@ body {
     margin: 50px;
 }
 
-/* Targeting the last item(s) */
 .grid > :nth-child(1):nth-last-child(odd),
 .grid > :nth-child(2):nth-last-child(odd) ~ :nth-child(1) {
     grid-column: span 1;
@@ -437,29 +433,28 @@ body {
     object-fit: cover;
 }
 
-/* Styling for buttons inside surgeon-profile */
 .surgeon-profile button {
-    background-color: #1c3a57; /* Dark blue background */
-    color: white; /* White text */
-    padding: 12px 25px; /* Increased padding for better spacing */
-    border: none; /* Remove default border */
-    font-size: 1em; /* Standard button text size */
-    cursor: pointer; /* Pointer cursor to indicate clickability */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
-    border-radius: 5px; /* Slightly rounded corners for a modern look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+    background-color: #1c3a57;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .surgeon-profile button:hover {
-    background-color: #005b99; /* Darker shade of blue on hover */
-    transform: translateY(-2px); /* Slight lift effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow for depth on hover */
+    background-color: #005b99;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .surgeon-profile button:active {
-    background-color: #003f6b; /* Even darker shade for active state */
-    transform: translateY(1px); /* Pressed effect on click */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Reduced shadow on active click */
+    background-color: #003f6b;
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .surgeon-info h3 {
@@ -474,7 +469,6 @@ body {
     color: #555;
 }
 
-/* Surgery Info Wrapper */
 .surgery-info-wrapper {
     display: flex;
     justify-content: space-between;
@@ -492,16 +486,15 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Page Title Styling */
 .page-title {
-    font-size: 2em; /* Larger font size for prominence */
-    color: #007acc; /* Use the theme color for consistency */
-    text-align: center; /* Center-align the title */
-    margin-top: 40px; /* Space above the title */
-    margin-bottom: 40px; /* Space below the title */
-    text-transform: uppercase; /* Make the text uppercase for emphasis */
-    letter-spacing: 2px; /* Add some letter spacing for readability */
-    padding-bottom: 10px; /* Padding below the text to separate it from the border */
+    font-size: 2em;
+    color: #007acc;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
 }
 
 /* Section Headings */
@@ -566,29 +559,28 @@ body {
     margin-bottom: 10px;
 }
 
-/* Container to align contact details and map side by side */
 .contact-container {
     display: flex;
-    justify-content: space-between; /* Distribute space evenly between the two sections */
-    align-items: flex-start; /* Align the items at the top */
-    gap: 20px; /* Add some space between the two sections */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
     margin-top: 40px;
 }
 
 /* Contact details section */
 .contact-details {
-    flex: 1; /* Allow the contact details to take up equal space */
-    min-width: 300px; /* Ensure the section does not get too narrow */
-    text-align: left; /* Align the text to the left */
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
 }
 
 /* Map section */
 .map {
-    flex: 1; /* Allow the map to take up equal space */
-    min-width: 300px; /* Ensure the section does not get too narrow */
-    padding: 20px; /* Add some padding to the map */
-    margin-bottom: 40px; /* Space below the map to separate it from other elements */
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    margin-bottom: 40px;
 }
 
 /* Map container to ensure it fits within the section */
@@ -601,11 +593,11 @@ body {
 /* Contact Form Section */
 .contact-form {
     padding: 60px 20px;
-    background-color: #f7fafc; /* Light background color */
-    border: 2px solid #007acc; /* Border around the form */
-    border-radius: 10px; /* Rounded corners for a smooth look */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin-bottom: 40px; /* Space below the form to separate it from other elements */
+    background-color: #f7fafc;
+    border: 2px solid #007acc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
 
 .contact-form h2 {
@@ -651,7 +643,7 @@ body {
 
 /* Map Section */
 .map {
-    padding: 20px 0 0 0; /* Reduced padding for consistency */
+    padding: 20px 0 0 0;
 }
 
 .map h2 {
@@ -687,28 +679,28 @@ body {
 /* Grid layout for the images */
 .picture-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates a 2x2 grid */
-    gap: 20px; /* Space between grid items */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     max-width: 1000px;
-    margin: 0 auto; /* Center the grid within the container */
+    margin: 0 auto;
 }
 
 .picture-item {
-    position: relative; /* Enable positioning for the overlay */
-    overflow: hidden; /* Hide overflow for a clean overlay appearance */
+    position: relative;
+    overflow: hidden;
 }
 
 .picture-wrapper img {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* Optional: Adds rounded corners to the images */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .picture-wrapper img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Overlay styling */
@@ -717,18 +709,18 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    background: rgba(0, 0, 0, 0.6);
     color: white;
     text-align: center;
     padding: 10px;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Smooth transition for the overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease;
     font-size: 1.2em;
-    border-radius: 0 0 8px 8px; /* Match border-radius of images */
+    border-radius: 0 0 8px 8px;
 }
 
 .picture-item:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
+    opacity: 1;
 }
 
 /* Footer Section */
@@ -789,11 +781,11 @@ body {
     }
 
     .contact-details, .contact-form {
-        min-width: 100%; /* Ensure full width on small screens */
+        min-width: 100%;
     }
 
     .picture-wrapper {
-        grid-template-columns: 1fr; /* Stacks images in a single column on smaller screens */
+        grid-template-columns: 1fr;
     }
 
     .surgery-info-wrapper {
