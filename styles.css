@@ -6,6 +6,8 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f5f7fa;
+    background-image: url('images/background3.jpg');
+    background-size: contain;
 }
 
 .container {
@@ -254,6 +256,32 @@ body {
     justify-self: center;
 }
 
+/* grid 3 layout */
+.grid-3 {
+    display: grid;
+    /* 3 columns*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px;
+}
+
+.proceduresGrid {
+    display: grid;
+    /* 1 column*/
+    grid-template-columns: 100%;
+    gap: 30px;
+    margin: 50px;
+}
+
+.preSurgeryHeader {
+    display: grid;
+    /* 2 column*/
+    grid-template-columns: 35% 65%;
+    gap: 0px;
+    margin: 50px;
+}
+
+/* Card Styles */
 .card {
     background: white;
     padding: 25px;
@@ -277,10 +305,119 @@ body {
     margin-bottom: 20px;
 }
 
+.expectations {
+    padding: 10px;
+    background-color: #1c3a57a4;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.expectations p {
+    text-align: left;
+}
+
+.expectations button {
+    background-color: #1c3a57;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.expectations button:hover {
+    background-color: #005b99;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.expectations button:active {
+    background-color: #003f6b;
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.proceduresCard {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proceduresCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.proceduresCard h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #007acc;
+}
+
+.proceduresCard p {
+    margin-bottom: 20px;
+}
+
+.preSurgeryCard {
+    background: rgba(255, 255, 255, 0);
+    text-align: left;
+    padding-left: 10px;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preSurgeryCard h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #007acc;
+}
+
+.preSurgeryCard p {
+    margin-bottom: 20px;
+}
+
+.preSurgeryCard img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.preSurgeryCard2 {
+    background: rgba(255, 255, 255, 0);
+    text-align: left;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.preSurgeryCard2 h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #007acc;
+}
+
+.preSurgeryCard2 p {
+    background: rgba(65, 105, 225, 0.514);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.preSurgeryCard2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 /* Testimonials Section */
 .testimonials {
-    padding: 60px 0;
-    background-color: #e8f1f8;
+    padding: 30px 0;
+    margin-bottom: 20px;
+    background-color: #e8f1f8af;
     text-align: center;
     border-top: 4px solid #007acc;
     border-bottom: 4px solid #007acc;
