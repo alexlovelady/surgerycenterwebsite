@@ -542,7 +542,7 @@ body {
 /* Surgeons Section */
 .surgeons {
     padding: 60px 0;
-    background-color: #f7fafc;
+    background-color: #f7fafcb6;
 }
 
 .surgeons h2 {
@@ -555,6 +555,7 @@ body {
 .surgeon-profile {
     display: flex;
     align-items: center;
+    margin: 20px;
     margin-bottom: 40px;
     background: white;
     padding: 20px;
