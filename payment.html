@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources - Sage Surgical Center</title>
+    <title>Pre-Surgery - Sage Surgical Center</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <nav class="navbar">
@@ -35,40 +35,42 @@
     </nav>
 </head>
 <body>
-    <section class="introduction container">
-        <h2>Helpful Resources for Your Health Journey</h2>
-        <p>At Sage Surgical Center, we believe in empowering our patients with the knowledge they need. Explore our collection of trusted resources, articles, and guides to support your well-being before, during, and after surgery.</p>
-        <button onclick="window.location.href='contact.html'">Contact Us for More Information</button>
-    </section>
-    <section id="resources" class="container">
-        <div class="grid">
-            <div  onclick="window.location.href='preSurgery.html'" class="card">
-                <h3>Pre-Surgery</h3>
-                <a href="preSurgery.html">Pre-Surgery Checklist</a><br>
-                <a href="insurancePlans.html">Insurance Plans We Accept</a><br>
-                <a href="preSurgeryFAQ.html">Frequently Asked Questions</a><br>
-            </div>
-            <div onclick="window.location.href='checkIn.html'" class="card">
-                <h3>During Your Stay</h3>
-                <a href="checkIn.html">Check-in and Admission</a><br>
-                <a href="duringFAQ.html">Frequently Asked Questions</a><br>
-            </div>
-            <div onclick="window.location.href='payment.html'" class="card">
-                <h3>Post-Surgery</h3>
-                <a href="payment.html">Pay Your Bill</a><br>
-                <a href="postSurgery.html">Post Operation and Pain Relief</a><br>
-                <a href="recoveryGuide.html">Recovery and Reminders</a><br>
+    <section class="resourceHeader container">
+        <div class="preSurgeryHeader">
+            <div class="preSurgeryCard">
+                <h3>After Your Surgery</h3><br>
+                <a href="payment.html">Pay Your Bill</a><br><br>
+                <a href="postSurgery.html">Post Operation and Pain Relief</a><br><br>
+                <a href="recoveryGuide.html">Recovery and Reminders</a><br><br>
                 <a href="postFAQ.html">Frequently Asked Questions</a>
             </div>
-            <div class="card">
-                <h3>Health Blogs</h3>
-                <a href="google.com">Blog Post 1 - August 13th 2024</a><br>
-                <a href="google.com">Blog Post 2 - August 5th 2024</a><br>
-                <a href="google.com">Blog Post 3 - July 28th 2024</a><br>
-                <a href="google.com">All Blog Posts</a>
+            <div class="preSurgeryCard">
+                <img src="images/postSurgery.png" alt="Post-Surgery Image">
             </div>
-        </div>
     </section>
+    <section class="resourceHeader container">
+        <div class="preSurgeryHeader">
+            <div class="preSurgeryCard2">
+                <p>
+                    <b>Pay Your Bill Online</b><br>
+                    <br>Online Payment will redirect you to an authorized payment processor for Sage Surgical.
+                    <br><br><a href="https://google.com">Pay Bill</a> - COMING SOON
+                </p>
+            </div>
+            <div class="preSurgeryCard">
+                <h3>Pay Bill</h3>
+                <p>
+                    Patients will incur a facility fee for the surgical services provided by Sage Surgical Center, an anesthesia fee for anesthesia services, and a professional fee from their surgeon. Additional charges may apply for services provided by ancillary providers, such as laboratory, pathology, or pharmacy, when medically necessary.
+
+                    <br><br>Payment in full, an approved payment plan, or insurance assignment is required before surgery. Patients should be prepared to meet any personal financial obligations.
+
+                    <br><br>Please bring your insurance card or a copy of both sides on the day of surgery. If needed, you may be asked to sign an assignment of benefits form to process an insurance claim.
+
+                    <br><br>As a courtesy, we will submit all insurance forms for patients who have prior authorization.
+                </p>
+            </div>
+    </section>
+    
     <footer class="footer">
         <div class="container">
             <p>2024 Sage Surgical & Neuromodulation Center</p>
